@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CartoDB - A Quick Guide</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">EDAV Community Contribution</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message" style="background-image: url('/img/SQL_Presentation_Final.jpg')">
+                        <h1>CartoDB - A Quick Guide</h1>
+                        <h3>Amla Srivastava (as5196)</h3>
+                        <hr class="intro-divider">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+                    <h2 class="section-heading">Introduction</h2>
+                    </h2>
+                        <h3> <small> CartoDB is a Software as a Service (SaaS) cloud computing platform that provides GIS and web mapping tools for display in a web browser. This review covers some basic features, requirements, advantages and drawbacks of the tool. The motivation for this tool review was my Final EDAV Project 'NYC Motor Vehicle Collisions' where my team and I used CartoDB for creating several maps.
+                          <br><br>CARTO is offered as a freemium service. This makes it easy for beginners/first-timers to get a flavor of the tool.
+                          CARTO basically offers two services:<br><br>
+
+                        <ul> <li><b>CARTO Builder:</b> allows users to manage data, run user side analysis and design custom maps; intended for non developers and beginners</li>
+                        <br><li> <b>CARTO Engine: </b> a set of APIs and developer libraries for building custom map and data visualization interfaces for advanced users</ul>
+                        </small></h3>
+
+                        <h3><small> Once the data has been uploaded, the user can create Maps using the data by selecting the 'New Map' option. There are several map types which can be used.
+                        The main chart types are shown here for the NYC Emergency Response Incidents dataset for the years 2011-2016. The dataset is available <a href = 'https://data.cityofnewyork.us/Public-Safety/Emergency-Response-Incidents/pasr-j7fb'>here</a>.</small></h3>
+
+                        *The maps here have been created purely for demonstration purposes and do not necessarily reflect the best way to plot the data.<br><br>
+
+
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Basic maps</h2>
+
+                    <h3> <small> The maps below show very emergency respnse incident in NYC that occured between 2011 and 2016 with yellow circles. In the case on the left, overlapping points are not blended whereas in the case on the right overlapping points are blended to make areas of higher incident count appear progresively darker.
+                    The map on the left also has pop-ups that appear on hovering and which display information about the borough and type of incident. </small></h3>
+
+                    <iframe width="50%" height="520" frameborder="0" style = "float:left;" src="https://amla26.carto.com/builder/d34c3d72-2c52-11e7-90db-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    <iframe width="50%" height="520" frameborder="0" style = "float:right;" src="https://amla26.carto.com/builder/a2749cd0-2c2a-11e7-8a4d-0ecd1babdde5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+                  </div>
+                </div>
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Animated maps</h2>
+
+                    <h3> <small> The maps below plot the individual emergency incidents between 2011-16 as a function of time. In the first map, all incidents are represented <body>
+                    the same color whereas in the second map incident are colored by incident-type.
+
+                    </small></h3>
+<!--
+                    <iframe width="100%" height="520" frameborder="0" style = "float:right;" src="https://amla26.carto.com/builder/29822344-2c2d-11e7-b248-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+-->
+                    <iframe width="100%" height="520" frameborder="0" style = "float:right;" src="https://amla26.carto.com/builder/44b37478-2c2e-11e7-bd4c-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                    <iframe width="100%" height="520" frameborder="0" style = "float:right;" src="https://amla26.carto.com/builder/f1afa2d2-2c2e-11e7-839f-0ecd1babdde5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+
+
+                  </div>
+                </div>
+
+
+
+      <div class="content-section-a">
+
+          <div class="container">
+                      <h2 class="section-heading">Area aggregation</h2>
+                      </h2>
+
+
+                          <h3><small> The map below shows emergenecy response incidents aggregated by area where area is represented by hexbins/squares. The darker the color, the greater
+                          the no. of incidents in that area and vice versa.</small></h3>
+<!--
+                          <iframe width="100%" height="520" frameborder="0" style = "float:left;" src="https://amla26.carto.com/builder/930179c8-2c2d-11e7-8e5d-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+-->
+                          <iframe width="50%" height="520" frameborder="0" style = "float:left;" src="https://amla26.carto.com/builder/930179c8-2c2d-11e7-8e5d-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                          <iframe width="50%" height="520" frameborder="0" style = "float:right;" src="https://amla26.carto.com/builder/479478b2-2c5c-11e7-84eb-0ecd1babdde5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+                  </div>
+
+              </div>
+
+
+
+              <div class="content-section-b">
+
+                  <div class="container">
+                              <h2 class="section-heading">Heatmap</h2>
+                              </h2>
+
+
+                                  <h3><small> The map below shows emergenecy response incidents over time in the form of a heatmap.</small></h3>
+        <!--
+                                  <iframe width="100%" height="520" frameborder="0" style = "float:left;" src="https://amla26.carto.com/builder/930179c8-2c2d-11e7-8e5d-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        -->
+                                  <iframe width="100%" height="520" frameborder="0" style = "float:left;" src="https://amla26.carto.com/builder/db860dbe-2c5d-11e7-9c95-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                          </div>
+
+                      </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+
+
+    <div class="content-section-a">
+
+        <div class="container">
+                    <h2 class="section-heading">Advantages and Drawbacks</h2>
+                    </h2>
+                        <h3> <small> Carto offers several advantages when it comes to location-based data visualization such as:<br>
+                          <ul>
+                            <br><li> <b>Ease of use</b>: It supports several data formats such as CSV, ZIP, SHAPEFILE, GeoJSON, TopoJSON, XLS and so on. Data can be uploaded easily
+                            from your local machine or cloud with a simple drag and drop operation. Once your dataset is connected you can make changes to your data, data types as well as select data using either
+                            the GUI or PostgreSQL. The GUI is very intuitive and user-friendly. CartoDB provides access to a number of in-built datasets. Unlike R, the tool does not require any specific skills except a basic background knowedge of
+                            map types and data pre-processing. It also has functionality to geocode data from country names/ postal codes and so on in case location information is not explicitly given in the data. Compared to R, it is very easy to map customized maps since it does not require any coding skills.</li>
+
+                           <br><li> <b>Several chart types</b>:  Carto offers multiple charting options, both static and dynamic. Data can be displayed as individual data points or aggregated as squares or hexbins and in heatmaps. Visualizations can also be animated by displaying data as a function of time. More advanced chart types are available in the paid versions. </li>
+                           <br><li> <b>Customization:</b> Carto has several options to customize visualizations using different color schemes, sizes, and strokes. One can also add pop-up labels and customized legends to better explain the data. Search boxes, zoom controls and layer selectors can be eaily integrated. Several types of analysis such as clustering, filtering, trend analysis, etc. can also be done. Carto maps work on a layered model, such that information can be plotted on consecutive layers. Charts are also visually appealing.</li>
+                           <br><li> <b>Easy of sharing:</b> Carto maps support one-click publishing to the web and are much easier to embed and share as compared to graphs created in R.</li>
+                           </small></h3>
+
+                           <h3> <small> However, as with any data visualization tool there are certain challenges while using it.<br>
+                           <ul>
+
+                            <br><li> <b>Speed</b>: For larger datasets, uploading data takes a very long time. Updates/changes to the database and maps for such data are also very slow and cumbersome.</li>
+                            <br><li> <b>Limited flexibility</b>: Despite several options for customization, Carto lacks the flexibility offered by other visualization tools since it addresses a very specific domain. </li>
+                            <br><li> <b>Price</b>: Carto services come in three flavors - Free, Personal and Enterprise. At $149/year, the Personal package is expensive if the user only occassionaly needs to plot map-based data. </li>
+
+                            </small></h3><br>
+
+                          </div>
+
+    </div>
+
+          <div class="content-section-b">
+
+              <div class="container">
+                          <h2 class="section-heading">Resources</h2>
+                          </h2>
+                              <h3> <small> Some basic tutorials for CartoDB are available <a href = 'https://carto.com/learn/guides'>here</a>  and the complete documentation is available at this <a href = 'https://carto.com/docs'>link</a>. </small></h3>
+
+
+
+                      </div>
+                      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+                      </div>
+                  </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
